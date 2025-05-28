@@ -52,7 +52,7 @@ df_transposed = process_data(df, first_call=True)
 
 app = Dash()
 server = app.server
-app.title = "NaturePro"
+app.title = "NatProCP"
 app._favicon = ("about_database_img_2.jpeg")
 
 # application layout starts from here
@@ -110,7 +110,7 @@ html.Div([
 
                       dcc.Textarea(
                           id='textarea_sel_compounds',
-                          value='Total Compounds in selected crop/plant 20',
+                          value='Total compounds in selected crop/plant 20',
 
                           style={'width': '100%', 'height': 50, 'text-align': 'left','font-family':'Times New Roman'},
                           className="text_area"
@@ -185,7 +185,7 @@ html.Div([
                   html.Hr(style={"width": "100%", "border-color": "red"}),
                   html.Div([
                       html.Img(id='image', src=app.get_asset_url(path='Images/126.png'),
-                               style={'height': '50%', 'width': '50%', 'object-fit': 'cover',
+                               style={'height': '30%', 'width': '30%', 'object-fit': 'cover',
                                       }
                                ), ], style={'display': 'flex', 'justify-content': 'center'
                                             }),
@@ -331,7 +331,7 @@ def update_compund_dropdwon(value):
 
     data=fetch_data(value,'')
     total_mols = data.shape[0]
-    text_area_text = 'Total Compounds in selected Crop/Plant: ' + str(total_mols)
+    text_area_text = 'Total compounds in selected Crop/Plant: ' + str(total_mols)
 
     options=data['Compound Name']
     value=options[0]
