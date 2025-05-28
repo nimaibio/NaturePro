@@ -51,6 +51,7 @@ df_transposed = process_data(df, first_call=True)
 
 
 app = Dash()
+server = app.server
 app.title = "NaturePro"
 app._favicon = ("about_database_img_2.jpeg")
 
