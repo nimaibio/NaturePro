@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Database</title>
+
+    <!-- add icon link -->
+    <link rel="icon" href="about_database_img_2.jpeg" type="image/x-icon" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: ghostwhite;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+
+        }
+
+        h2 {
+            color: ghostwhite;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            color: #2E8B57;
+            margin-top: 10px;
+        }
+
+        .stat-text {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .button_info {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 200px;
+            font-size: 20px;
+        }
+
+        .button_info:hover {
+            background-color: #555;
+        }
+
+        .about-section {
+            background-image: url('img_back2.jpg');
+            padding: 8px;
+            text-align: center;
+            background-color: #474e5d;
+            color: ghostwhite;
+        }
+
+        .footer {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: ghostwhite;
+        }
+
+        a {
+            color: ghostwhite;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #DADADA;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div style="display: flex; margin: 10px;">
+    <div style="width: 50%;"></div>
+    <div style="width: 50%;">
+        <div style="display: inline-block"><button class="button_info" onclick="window.open('about_database.html', '_self');">Home</button></div>
+        <div style="display: inline-block"><button class="button_info" onclick="window.open('../', '_self');">Data Search</button></div>
+        <div style="display: inline-block"><button class="button_info" onclick="window.open('about_us.html', '_self');">Contact Us</button></div>
+    </div>
+</div>
+
+<div class="about-section">
+    <h1>NaturePro</h1>
+    <h2>Plant-Derived Natural Products Database for Crop Protection</h2>
+</div>
+
+<div class="container">
+    <div class="stats">
+        <div class="stat-item">
+            <img src="about_database_img_1.jpeg" alt="Plant Image">
+            <div class="stat-number" id="plantCount">262</div>
+            <div class="stat-text">Total Plants</div>
+        </div>
+        <div class="stat-item">
+            <img src="about_database_img_2.jpeg" alt="Compound Image">
+            <div class="stat-number" id="compoundCount">5281</div>
+            <div class="stat-text">Total Compounds</div>
+        </div>
+        <div class="stat-item">
+            <img src="visitor.jpeg" alt="Visitor Image">
+            <div class="stat-number" id="visitorCount">5</div>
+            <div class="stat-text">Visitors</div>
+        </div>
+    </div>
+    <div class="description">
+        <p>This open-access database offers a curated collection of plant-derived natural compounds from agriculturally important Indian plants, designed to facilitate the identification of safe and effective therapeutic targets for various diseases.</p>
+        <p>Engineered for virtual screening, it allows researchers to discover novel natural compounds and provides structural data in optimized ".pdb" format.</p>
+        <p>The database offers detailed profiles encompassing physicochemical, pharmacokinetic, pharmacodynamic, and toxicological parameters, rendering it an invaluable resource for in-silico drug discovery and development process.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h3> <a href="ICAR_Data_Use_Licence.pdf">ICAR Data Use License</a></h3>
+    <h3>Copyright &copy; ICAR - <a href="https://iasri.icar.gov.in/">Indian Agricultural Statistics Research Institute</a></h3>
+    <h3>Library Avenue, PUSA, New Delhi - 110 012 (INDIA)</h3>
+    <h3>Phone: 91-11-25847121-24, 25841254 (PBX), Fax: 91-11-25841564</h3>
+    <h3>All rights reserved</h3>
+    <a href="https://iasri.icar.gov.in/"><img src="iasri.png" alt="ICAR" style="width: 100px; height: 100px; border-radius: 50%;"></a>
+    <a href="https://icar.org.in/"><img src="test_icar.jpg" alt="ICAR" style="width: 100px; height: 100px; border-radius: 50%;"></a>
+    <a href="https://iari.res.in/en/index.php"><img src="iari.png" alt="ICAR" style="width: 100px; height: 100px; border-radius: 50%;"></a>
+</div>
+
+<script>
+    // Function to animate the count with a specific step
+    function animateCount(id, start, end, duration, step) {
+        let range = end - start;
+        let current = start;
+        let increment = step || 1;
+        let stepTime = Math.abs(Math.floor(duration / (range / increment)));
+        let obj = document.getElementById(id);
+        let timer = setInterval(function() {
+            current += increment;
+            if (current > end) current = end;
+            obj.innerHTML = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Function to update and display the visitor count
+    function updateVisitorCount() {
+        const visitorCountKey = 'visitorCount';
+        let visitorCount = localStorage.getItem(visitorCountKey);
+        if (!visitorCount) {
+            visitorCount = 1; // First-time visit
+        } else {
+            visitorCount = parseInt(visitorCount) + 1;
+        }
+        localStorage.setItem(visitorCountKey, visitorCount);
+        document.getElementById("visitorCount").innerHTML = visitorCount;
+    }
+
+    // Start the count animations on page load
+    window.onload = function() {
+        animateCount("plantCount", 0, 262, 2000, 1);
+        animateCount("compoundCount", 0, 5281, 1500, 100);
+        updateVisitorCount();
+    };
+</script>
+
+</body>
+</html>
