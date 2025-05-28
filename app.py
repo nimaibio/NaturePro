@@ -38,7 +38,8 @@ def process_data(df, first_call=False):
 
 # rename genotype options
 values = os.listdir('csv_data')
-print(values)
+# print(values)
+values.sort()
 
 labels = []
 for item in values:
@@ -452,6 +453,6 @@ def func(n_clicks):
 
 
 if __name__ == '__main__':
-    data = fetch_data('abutilon_indicum','')
+    # data = fetch_data('abutilon_indicum','')
     # app.run(host="200.200.202.79",port="8050")
     app.run_server()
