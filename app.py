@@ -38,7 +38,7 @@ def process_data(df, first_call=False):
 
 # rename genotype options
 values = os.listdir('csv_data')
-print(values)
+values.sort()
 
 labels = []
 for item in values:
