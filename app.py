@@ -81,7 +81,7 @@ html.Div([
 
 
     html.Div(className="about-section", children=[
-    html.H1("NaturePro"),
+    html.H1("NatProCP"),
     html.H2("Plant-Derived Natural Products Database for Crop Protection")
 
 ],
