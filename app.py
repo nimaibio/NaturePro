@@ -104,7 +104,7 @@ html.Div([
                   ]),
                   # Statistics Div
                   html.Div([
-                      html.H1("Statistics", style={'margin-top': '10px',
+                      html.H1("Statistics", style={'font-size': '30','margin-top': '10px',
                                                    'text-align': 'center'}, ),
 
 
