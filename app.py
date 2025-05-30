@@ -441,4 +441,4 @@ def func(n_clicks):
 if __name__ == '__main__':
     # data = fetch_data('abutilon_indicum','')
     # app.run(host="200.200.202.79",port="8050")
-    app.run_server(8051)
+    app.run_server(port=8051)
