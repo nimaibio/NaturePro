@@ -291,7 +291,7 @@ html.Div([
                      "ICAR Data Use Licence"
                  ]),
                 html.H3(children=[
-                     "Copyright © ICAR - Indian Agricultural Statistics Research Institute"
+                     "ICAR - Indian Agricultural Statistics Research Institute"
                  ]),
                     html.H3(children=[
                      "Library Avenue, PUSA, New Delhi - 110 012 (INDIA)"
@@ -299,9 +299,7 @@ html.Div([
                     html.H3(children=[
                     "Phone: 91-11-25847121-24, 25841254 (PBX), Fax: 91-11-25841564"
                  ]),
-                    html.H3(children=[
-                    "All rights reserved"
-                 ]),
+        
                     html.A(href="https://iasri.icar.gov.in/",children=[html.Img(src=app.get_asset_url(path='iasri.png'),
                                style={'height': '100px', 'width': '100px', 'border-radious':'50%'
                                       })]),
